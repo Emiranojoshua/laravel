@@ -1,3 +1,3 @@
-@props(['active' => false])
+@props(['active' => true])
 
-<a {{$attributes}}>{{ $slot }} {{ $active }} </a>
+<a {{ $attributes }}  style="{{$active ?  "background-color: blue" : '' }}" >{{ $slot}}</a>
