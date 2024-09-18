@@ -20,5 +20,6 @@
     <x-nav-link href="/contact" :active="request()->is('contact')">contact </x-nav-link>
 
     {{ $heading }}
+</body>
 
 </html>
