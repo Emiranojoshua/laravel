@@ -1,6 +1,6 @@
 <x-layouts>
     <x-slot:heading>
-        <h1>Jobs page</h1>
+        <h1>Jobs page</h1> <br><x-button href="jobs/create">Create Job</x-button>
         <ul>
             @foreach ($jobs as $job)
             <br><br>

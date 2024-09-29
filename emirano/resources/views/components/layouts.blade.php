@@ -18,6 +18,7 @@
     <x-nav-link href="/" :active="request()->is('/')">home</x-nav-link>
     <x-nav-link href="/jobs" :active="request()->is('jobs')">jobs</x-nav-link>
     <x-nav-link href="/contact" :active="request()->is('contact')">contact </x-nav-link>
+    {{-- <x-nav-link href="/jobs/create" :active="request()->is('create')">create </x-nav-link> --}}
 
     {{ $heading }}
 </body>
