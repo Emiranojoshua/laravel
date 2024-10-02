@@ -9,8 +9,7 @@ use App\Models\Employer;
 
 
 
-class Job extends Model
-{
+class Job extends Model{
     use HasFactory;
 
     protected $table = 'jobs_listings';
@@ -18,12 +17,13 @@ class Job extends Model
     // protected $fillable = ['title', 'salary', 'employer_id'];
     protected $guarded = [];
 
-    public  function employer(){
+    public  function employer()
+    {
         return $this->belongsTo(Employer::class);
     }
 
-    public function tags(){
-        return $this->belongsToMany(Tag::class, foreignPivotKey:'jobs_listings_id');
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'jobs_listings_id');
     }
 }
-

@@ -5,19 +5,19 @@
         <form action="/jobs" method="POST">
             @csrf
 
-            <div>Title</div>
-            <input type="text" name="title" id=""> <br> </br>
-            @error('title')
-                {{ $message}} <br><br>
-            @enderror
-            <div>Salary</div>
-            <input type="text" name="salary" id=""> <br> </br>
-            @error('salary')
-                {{ $message }}<br>
-            @enderror
+            <x-form-label for="title">Title</x-form-label>
+            <x-form-input name="title" type="text"></x-form-input>
+            <x-form-error name="title"></x-form-error>
+
+
+            <x-form-label for="salary">Salary</x-form-label>
+            <x-form-input name="salary" type="text"></x-form-input>
+            <x-form-error name="salary"></x-form-error>
+
+
             <br><input type="submit" value="Create">
         </form>
-       
+
     </x-slot:heading>
 
 </x-layouts>
