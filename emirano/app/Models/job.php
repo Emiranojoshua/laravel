@@ -9,7 +9,8 @@ use App\Models\Employer;
 
 
 
-class Job extends Model{
+class Job extends Model
+{
     use HasFactory;
 
     protected $table = 'jobs_listings';

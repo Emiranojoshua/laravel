@@ -20,7 +20,10 @@
     <x-nav-link href="/contact" :active="request()->is('contact')">contact </x-nav-link>
     @auth
 
-    
+    <form action="/logout" method="post">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
     @endauth
 
     @guest

@@ -27,7 +27,7 @@
             <x-form-error name="password_confirmation"></x-form-error>
 
 
-            <br><input type="submit" value="Create">
+            <br><input type="submit" value="Register">
         </form>
 
     </x-slot:heading>

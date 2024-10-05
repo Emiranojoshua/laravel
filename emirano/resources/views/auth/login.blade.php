@@ -16,7 +16,7 @@
 
 
 
-            <br><input type="submit" value="Create">
+            <br><input type="submit" value="Login">
         </form>
 
     </x-slot:heading>
