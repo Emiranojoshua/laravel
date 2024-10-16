@@ -11,17 +11,17 @@ use Illuminate\Log\Logger;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function (): string {
-    // dispatch(function(){
-    //     logger('this is logged via dispated function');
-    // })->delay(2);
+// Route::get('/test', function (): string {
+//     // dispatch(function(){
+//     //     logger('this is logged via dispated function');
+//     // })->delay(2);
     
-    $job = Job::first();
+//     $job = Job::first();
 
-    TranslateJob::dispatch($job);
+//     TranslateJob::dispatch($job);
 
-    return 'done';
-});
+//     return 'done';
+// });
 
 
 
@@ -62,6 +62,6 @@ Route::get('/register', [RegisteredUserController::class, 'create']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
 
 Route::get('/login', [SessionController::class, 'create'])
-    ->name('login');
+    ->name('login')->middleware('guest');
 Route::post('/login', [SessionController::class, 'store']);
 Route::post('/logout', [SessionController::class, 'destroy']);
